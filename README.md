@@ -134,3 +134,11 @@ usage: tem_linux.py [-h] [--working-dir WORKING_DIR] [--log-dir LOG_DIR] [--port
 示例：指定工作目录为/home 日志目录/home 端口为8086 删除密码为 001 002 003
 ./webfilemanager-linux-amd64-v4.3  --working-dir /home --log-dir /home --port 8086 --delete-passwords 001 002 003
 ```
+#### GUI主界面
+<img width="799" height="630" alt="GUI启动界面" src="https://github.com/user-attachments/assets/6878d029-3139-423e-9f2f-aff2e18a0f34" />
+
+#### WEB主界面
+<img width="992" height="699" alt="WEB主界面" src="https://github.com/user-attachments/assets/37af9532-2cdf-42d6-b68d-232e22758793" />
+
+
+
