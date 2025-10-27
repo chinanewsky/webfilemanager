@@ -96,14 +96,37 @@
 - 跨平台兼容：处理了 Windows 和类 Unix 系统的路径差异
 - 临时文件管理：使用.upload_cache 目录存储上传中的临时文件
 
-## 使用方法
-- 直接运行程序，默认使用程序当前目录作为工作目录
-- 通过浏览器访问提示的地址（本地访问http://127.0.0.1:65516）
-- 使用提供的删除密码进行删除操作
-
 ### 技术架构
 - 后端：Python + http.server + SQLite
 - 前端：HTML5 + CSS3 + JavaScript
 - GUI：Tkinter
 - 数据库：SQLite with connection pooling
 - 线程模型：ThreadingTCPServer + 多线程处理
+
+## 使用方法
+### windows环境
+- 解压后直接运行程序，默认使用程序当前目录作为工作目录
+- 通过浏览器访问提示的地址（本地访问http://127.0.0.1:65516）
+- 使用提供的删除密码进行删除操作
+
+### linux环境
+解压
+tar -zxvf webfilemanager-linux-amd64-v4.3.tar.gz
+直接运行
+./webfilemanager-linux-amd64-v4.3
+指定所有参数
+./webfilemanager-linux-amd64-v4.3  --working-dir /path/to/files --log-dir /path/to/files --port 65516 --delete-passwords pwd1 pwd2 pwd3 
+
+语法：
+usage: tem_linux.py [-h] [--working-dir WORKING_DIR] [--log-dir LOG_DIR] [--port PORT]
+                    [--delete-passwords DELETE_PASSWORDS DELETE_PASSWORDS DELETE_PASSWORDS] [--open-browser]
+
+参数：
+  -h, --help                                                                      查看帮助
+  --working-dir, -d WORKING_DIR                                                   工作目录 (默认当前目录)
+  --log-dir, -l LOG_DIR                                                           日志目录 (默认当前目录)
+  --port, -p PORT                                                                 端口号 (默认: 65516)
+  --delete-passwords, -w DELETE_PASSWORDS DELETE_PASSWORDS DELETE_PASSWORDS       删除密码，三个用空格分隔 (默认: Mysoy007 Mysoy9527 Mysoy1001)
+
+示例：指定工作目录为/home 日志目录/home 端口为8086 删除密码为 001 002 003
+./webfilemanager-linux-amd64-v4.3  --working-dir /home --log-dir /home --port 8086 --delete-passwords 001 002 003
