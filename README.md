@@ -110,10 +110,13 @@
 - 使用提供的删除密码进行删除操作
 
 ### linux环境
+```
 解压
 tar -zxvf webfilemanager-linux-amd64-v4.3.tar.gz
+
 直接运行
 ./webfilemanager-linux-amd64-v4.3
+
 指定所有参数
 ./webfilemanager-linux-amd64-v4.3  --working-dir /path/to/files --log-dir /path/to/files --port 65516 --delete-passwords pwd1 pwd2 pwd3 
 
@@ -130,3 +133,4 @@ usage: tem_linux.py [-h] [--working-dir WORKING_DIR] [--log-dir LOG_DIR] [--port
 
 示例：指定工作目录为/home 日志目录/home 端口为8086 删除密码为 001 002 003
 ./webfilemanager-linux-amd64-v4.3  --working-dir /home --log-dir /home --port 8086 --delete-passwords 001 002 003
+```
